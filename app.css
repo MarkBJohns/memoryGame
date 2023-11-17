@@ -1,0 +1,220 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: maroon;
+    color: goldenrod;
+}
+
+h1{
+    justify-content: center;
+    position: fixed;
+    top: 25%;
+}
+
+#home{
+    position: absolute;
+    font-size: 1em;
+    color: goldenrod;
+    height: 25px;
+    width: 50px;
+    bottom: 2em;
+    left: 2em;
+    background: none;
+    border: none;
+}
+
+button{
+    width: 200px;
+    height: 75px;
+    font-size: 2em;
+}
+
+#beginEasy{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 300px;
+    height: 300px;
+    border: none;
+}
+#beginHard{
+    display: none;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    width: 300px;
+    height: 300px;
+    border: none;
+}
+#beginEasy button{
+    background: none;
+    height: 150px;
+    width: 150px;
+    font-size: 9em;    
+}
+#beginHard button{
+    background: none;
+    height: 150px;
+    width: 150px;
+    font-size: 9em;    
+}
+#hearts{
+    color: red;
+    border: none;
+}
+#hardhearts{
+    color: red;
+    border: none;
+}
+#diamonds{
+    color: red;
+    border: none;
+}
+#harddiamonds{
+    color: red;
+    border: none;
+}
+#clubs{
+    border: none;
+}
+#hardclubs{
+    border: none;
+}
+#spades{
+    border: none;
+}
+#hardspades{
+    border: none;
+}
+.none{
+    display: none;
+}
+.off{
+    display: none;
+}
+#hardmode{
+    width: 3rem;
+}
+
+
+.glow{
+    text-shadow: 0 0 50px white;
+}
+
+.shadow{
+    text-shadow: 0 0 10px rgba(70,70,70);
+}
+#game{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 10px;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+}
+
+#hardgame{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-gap: 10px;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+}
+
+.card{
+    padding: 0;
+    margin: 0;
+    height: 9rem;
+    width: 7.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform .75s;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+#hardgame .card{
+    padding: 0;
+    margin: 0;
+    height: 8rem;
+    width: 6.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform .75s;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+}
+.card.flipped{
+    transform: rotateY(180deg) scaleX(-1);
+}
+
+.card.unflipped{
+    transform: scaleX(1);
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newgame{
+    z-index: 10;
+}
+
+.gameover{
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+
+#bestscore{
+   display: flex; 
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: flex-end;
+}
+
+#hardform{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+#hardform input{
+    margin-right: -1em;
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s infinite;
+  }
+  
